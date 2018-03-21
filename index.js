@@ -8,6 +8,9 @@ const minimist = require('minimist');
 
 const ARGV = minimist(process.argv.slice(2));
 
+if (!argv.name) throw new Error("argument name is empty");
+if (!argv.file) throw new Error("argument file is empty");
+
 const {
     name:IMG_NAME,
     file:FILE,

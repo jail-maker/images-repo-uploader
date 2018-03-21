@@ -8,14 +8,14 @@ const minimist = require('minimist');
 
 const ARGV = minimist(process.argv.slice(2));
 
-if (!argv.name) throw new Error("argument name is empty");
-if (!argv.file) throw new Error("argument file is empty");
+if (!ARGV.name) throw new Error('argument name is empty');
+if (!ARGV.file) throw new Error('argument file is empty');
 
 const {
     name:IMG_NAME,
     file:FILE,
     parent:PARENT = null,
-    version:VERSION = 0.0.1,
+    version:VERSION = '0.0.1',
     maintainer:MAINTAINER = null,
     repo:REPO = 'http://127.0.0.1:3000',
 } = ARGV;
